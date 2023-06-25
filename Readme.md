@@ -7,6 +7,7 @@ Code Modularity: The code is quite modular with separate methods for different f
 DocBlocks: The use of DocBlocks for each method is good as it provides context and information about the method's purpose and the expected inputs.
 
 The parts that can be improved:
+
 Repeated Code: The code repeatedly retrieves all request data with $data = $request->all(); in several methods. If all the data from the request isn't needed, only the required data should be retrieved to ensure data integrity.
 Hardcoding Role IDs: The roles (like Admin and Super Admin) are being retrieved using the env() helper. It would be better to use constants to retrieve these values for better maintainability.
 Validation: There's no validation performed on the incoming request data. Before processing, the data should be validated according to the application's requirements.
